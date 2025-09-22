@@ -5,8 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab1_rab2_GorbatovZ.Z_BPI_23_01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Работа с геометрическими фиугурами" MaxHeight="275" MaxWidth="800" MinHeight="275" MinWidth="800" Height="275" Width="800"  WindowStartupLocation="CenterOwner">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Name="Panel" Grid.Row="0" Grid.Column="1" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Введите данные" Grid.ColumnSpan="2" FontSize="24" FontWeight="Black" HorizontalAlignment="Center"></Label>
+            <Label Name="lbl1" Content="Первая диагональ ромба:" Grid.Row="1" Margin="5" FontSize="16"/>
+            <Label Name="lbl2" Content="Вторая диагональ ромба:" Grid.Row="2" Margin="5" FontSize="16"/>
+            <Label Name="lbl3" Content="Сторона ромба:" Grid.Row="3" Margin="5" FontSize="16"/>
+            <TextBox Name="textBox1" Grid.Column="1" Grid.Row="1" Margin="5" FontSize="16" PreviewTextInput="NumberValidationTextBox" />
+            <TextBox Name="textBox2" Grid.Column="1" Grid.Row="2" Margin="5" FontSize="16" PreviewTextInput="NumberValidationTextBox" />
+            <TextBox Name="textBox3" Grid.Column="1" Grid.Row="3" Margin="5" FontSize="16" PreviewTextInput="NumberValidationTextBox" />
+            <Button Name="GetInfo" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Center" 
+           HorizontalAlignment="Center" Height="35" Margin="5" Width="100" 
+           Content="Вычислить" FontSize="14" FontWeight="Bold" Visibility="Hidden" Click="GetInfo_Click"/>
+        </Grid>
         
+        <StackPanel>
+            <Label Content="Выберите фигуру" FontSize="24" FontWeight="Black" HorizontalAlignment="Center"></Label>
+            <Viewbox Height="20" HorizontalAlignment="Left" Margin="5">
+                <RadioButton Name="Rhombus" GroupName="Figure" Content="Ромб" IsChecked="True" Checked="Rhombus_Checked" ></RadioButton>
+            </Viewbox>
+            <Viewbox Height="20" HorizontalAlignment="Left" Margin="5">
+                <RadioButton Name="Parallelepiped" GroupName="Figure" Content="Параллелепипед" Checked="Parallelepiped_Checked" ></RadioButton>
+            </Viewbox>
+            <Viewbox Height="20" HorizontalAlignment="Left" Margin="5">
+                <RadioButton Name="Ellipse" GroupName="Figure" Content="Эллипс" Checked="Ellipse_Checked" ></RadioButton>
+            </Viewbox>
+        </StackPanel>
+        
+
+
     </Grid>
 </Window>

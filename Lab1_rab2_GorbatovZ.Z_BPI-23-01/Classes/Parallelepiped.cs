@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Lab1_rab2_GorbatovZ.Z_BPI_23_01.Classes
 {
     public class Parallelepiped : Figure
