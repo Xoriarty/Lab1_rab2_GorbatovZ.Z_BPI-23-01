@@ -40,7 +40,7 @@
            Content="Вычислить" FontSize="14" FontWeight="Bold" Visibility="Hidden" Click="GetInfo_Click"/>
         </Grid>
         
-        <StackPanel>
+        <StackPanel Name="RadioStack">
             <Label Content="Выберите фигуру" FontSize="24" FontWeight="Black" HorizontalAlignment="Center"></Label>
             <Viewbox Height="20" HorizontalAlignment="Left" Margin="5">
                 <RadioButton Name="Rhombus" GroupName="Figure" Content="Ромб" IsChecked="True" Checked="Rhombus_Checked" ></RadioButton>
